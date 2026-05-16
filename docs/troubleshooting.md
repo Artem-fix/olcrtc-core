@@ -179,4 +179,4 @@ curl --socks5 127.0.0.1:1080 https://bash.ws/dnsleak/test/1234
 
 ---
 
-*[← Вернуться к оглавлению](manual.md)*
+*[← Вернуться к мануалу](manual.md)*
