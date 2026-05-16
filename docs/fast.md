@@ -14,7 +14,7 @@
 ## 1. Сборка из исходников
 
 ```bash
-git clone https://github.com/openlibrecommunity/olcrtc-core
+git clone https://github.com/Artem-fix/olcrtc-core
 cd olcrtc-core
 
 # Зависимости
