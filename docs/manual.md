@@ -52,4 +52,4 @@
 ```
 
 ---
-*[← Вернуться к описанию](~/README.md)*
+*[← Вернуться к описанию](https://github.com/Artem-fix/olcrtc-core/blob/main/README.md)*
