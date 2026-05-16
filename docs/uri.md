@@ -72,3 +72,6 @@ qrencode -t UTF8 "olcrtc://telemost/CONF-2026-ABCD?key=..."
 # Через Python
 python3 -c "import qrcode; qrcode.make('olcrtc://telemost/CONF-2026-ABCD?key=...').show()"
 ```
+
+---
+*[← Вернуться к мануалу](manual.md)*
