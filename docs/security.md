@@ -3,13 +3,14 @@
 ## Криптографическая модель
 
 ### Pre-Shared Key (PSK)
-
+```
 Оба участника заранее договариваются об общем секрете — 256-битном ключе. Ключ **никогда не передаётся по сети** и используется только как входной материал для HKDF.
 PSK (256 бит) ──┐ ├──▶ HKDF-SHA256 ──▶ SessionKey_Send (256 бит) Общий секрет ──┘ └──▶ SessionKey_Recv (256 бит) (X25519 DH)
-
+```
 ### Схема установки сессии (Handshake)
+```
 Клиент Сервер │ │ │── ClientPubKey (32 байта) ───────────▶│ │ │ Генерирует ServerKeypair │◀──── ServerPubKey (32 байта) ────────│ │◀──── AEAD{"olcrtc-hello"} ────────────│ │ │ │ DH(ClientPriv, ServerPub) │ DH(ServerPriv, ClientPub) │ HKDF(PSK, SharedSecret, │ HKDF(PSK, SharedSecret, │ ClientPub, ServerPub) │ ClientPub, ServerPub) │ → SendKey, RecvKey │ → RecvKey, SendKey │ │ │── AEAD{"olcrtc-ready"} ─────────────▶│ │ │ ├── Зашифрованный канал готов ──────────┤
-
+```
 ### Алгоритмы
 
 | Примитив | Алгоритм | Параметры |
@@ -82,3 +83,5 @@ AmbientCapabilities=
 | Анонимность от провайдера | ❌ | Провайдер видит ваш IP |
 | Сокрытие факта использования сервиса | ⚠️ | Трафик выглядит как WebRTC-звонок |
 | Компрометация устройства | ❌ | Выходит за рамки ядра |
+
+*[← Вернуться к мануалу](manual.md)*
