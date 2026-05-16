@@ -158,4 +158,5 @@ sudo systemctl enable --now olcrtc-core
 sudo journalctl -u olcrtc-core -f
 ```
 
+---
 *[← Вернуться к мануалу](manual.md)*
